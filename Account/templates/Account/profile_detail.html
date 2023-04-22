@@ -1,0 +1,15 @@
+{% extends "miBlog/base.html "%}
+
+{% block main %}
+<p>
+    <h1> Perfil de {{object.user}}</h1><a href="{% url 'update-profile' profile.user %}">Editar</a>
+    <br>
+    <img src="{{ object.imagen.url }}" width="480px" height="70%">
+    </br>
+    <br>
+    {{object.acerca_de_mi}}
+    </br>
+    <a href="{% url 'index' %}">Volver</a>
+</p>
+
+{% endblock %}

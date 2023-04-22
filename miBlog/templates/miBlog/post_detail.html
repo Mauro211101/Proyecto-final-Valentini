@@ -1,0 +1,17 @@
+{% extends "miBlog/base.html "%}
+
+{% block main %}
+<p>
+    <h1>{{object.nombre_circuito}}</h1>
+    <br>
+    <img src="{{ object.circuit_image.url }}" width="480px" height="70%">
+    </br>
+    <br>
+    {{object.descripcion_circuito}}
+    </br>
+    <h2>Autor del post: {{object.post_author}}</h2>
+    <h3>Creado el {{object.fecha_de_creacion}}</h3>
+    <a href="{% url 'post-list' %}">Volver</a>
+</p>
+
+{% endblock %}
